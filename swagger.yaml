@@ -571,8 +571,6 @@ paths:
                         sent_at:
                           type: string
                           format: date-time
-                        is_read:
-                          type: boolean
                   page:
                     type: integer
                   limit:
@@ -733,8 +731,6 @@ components:
         sent_at:
           type: string
           format: date-time
-        is_read:
-          type: boolean
 
     UserChat:
       type: object
