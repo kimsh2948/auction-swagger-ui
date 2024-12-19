@@ -13,18 +13,18 @@ paths:
     post: 
       tags:
         - Login
-      summary: Authorization Code를 사용한 회원가입 및 로그인
+      summary: Authorization을 사용한 회원가입 및 로그인
       description: 로그인 처리 후 Access_Token과 Refresh_Token을 Json형식으로 반환
       parameters:
-        - name: code
-          in: query
+        - name: Authorization
+          in: header
           required: true
           schema:
             type: string
-          description: Authorization Code (지금은 네이버만)
+          description: naver login Authorization (지금은 네이버만)
       responses:
         '200':
-          description: 엑세스 토큰과 리프레쉬 토큰 정보를 반환합니다.
+          description: 엑세스 토큰과 리프레쉬 토큰을 생성해 json 으로 반환합니다.
           content:
             application/json:
               schema:
