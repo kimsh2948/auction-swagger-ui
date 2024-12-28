@@ -311,7 +311,7 @@ paths:
   /prizes/{prize_id}/entries:
     post:
       tags:
-        - Prize Entry
+        - Prize Event
       summary: Enter a prize
       description: 특정 경품에 대한 응모를 처리합니다.
       parameters:
