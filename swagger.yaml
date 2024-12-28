@@ -320,18 +320,6 @@ paths:
           required: true
           schema:
             type: integer
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                userId:
-                  type: integer
-                  description: 사용자 ID
-              required:
-                - userId
       responses:
         '200':
           description: Prize entry successful
