@@ -653,18 +653,18 @@ components:
           type: string
           format: date-time
 
-    Winner:
-      type: object
-      properties:
-        winner_id:
-          type: integer
-        user_id:
-          type: integer
-        prize_id:
-          type: integer
-        winning_time:
-          type: string
-          format: date-time
+    # Winner:
+    #   type: object
+    #   properties:
+    #     winner_id:
+    #       type: integer
+    #     user_id:
+    #       type: integer
+    #     prize_id:
+    #       type: integer
+    #     winning_time:
+    #       type: string
+    #       format: date-time
 
     ChatRoom:
       type: object
