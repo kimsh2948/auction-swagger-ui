@@ -254,7 +254,7 @@ paths:
                 description:
                   type: string
                   description: 경품 설명
-                quantity:
+                total_count:
                   type: integer
                   description: 총 경품 수량
                 start_time:
@@ -263,7 +263,7 @@ paths:
                   description: 응모 시작 시간
               required:
                 - name
-                - quantity
+                - total_count
                 - start_time
       responses:
         '200':
@@ -307,7 +307,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Prize'
-                
+
   /users/{user_id}/winners:
     get:
       tags:
@@ -579,12 +579,11 @@ components:
           type: string
         description:
           type: string
-        quantity:
+        total_count:
+          type: integer
+        remaning_count:
           type: integer
         start_time:
-          type: string
-          format: date-time
-        created_at:
           type: string
           format: date-time
 
