@@ -360,27 +360,27 @@ paths:
                   error:
                     type: string
 
-  /users/{user_id}/winners:
-    get:
-      tags:
-        - Prize Event
-      summary: Get user's winning records
-      description: 특정 사용자의 당첨 기록을 조회합니다.
-      parameters:
-        - in: path
-          name: user_id
-          required: true
-          schema:
-            type: integer
-      responses:
-        '200':
-          description: Winning records retrieved successfully
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/Winner'
+  # /users/{user_id}/winners:
+  #   get:
+  #     tags:
+  #       - Prize Event
+  #     summary: Get user's winning records
+  #     description: 특정 사용자의 당첨 기록을 조회합니다.
+  #     parameters:
+  #       - in: path
+  #         name: user_id
+  #         required: true
+  #         schema:
+  #           type: integer
+  #     responses:
+  #       '200':
+  #         description: Winning records retrieved successfully
+  #         content:
+  #           application/json:
+  #             schema:
+  #               type: array
+  #               items:
+  #                 $ref: '#/components/schemas/Winner'
 
   /api/chats:
     post:
