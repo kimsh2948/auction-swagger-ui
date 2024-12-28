@@ -638,6 +638,7 @@ components:
         start_time:
           type: string
           format: date-time
+          example: 2024-12-31T00:00:00
 
     Entry:
       type: object
