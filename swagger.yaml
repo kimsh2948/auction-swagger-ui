@@ -61,7 +61,7 @@ paths:
                   errorMessage:
                     type: string
                 
-  /oauth2/restore:
+  /oauth2/token/restore:
     post: 
       tags:
         - Login
