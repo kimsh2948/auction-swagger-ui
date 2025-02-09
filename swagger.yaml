@@ -132,7 +132,11 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Auction'
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: "경매 등록 성공!"
 
   /api/auctions/{id}:
     get:
@@ -731,9 +735,60 @@ components:
     Auction:
       type: object
       properties:
-        message:
+        id:
+          type: integer
+          example: 1
+        title:
           type: string
-          example: "경매 등록 성공!"
+          example: "롤렉스 서브마린 시계 경매 시작합니다!"
+        name:
+          type: string
+          example: "롤렉스 서브마린 시계"
+        description:
+          type: string
+          example: "아주 상태 좋은 A급 롤렉스 시계입니다. 많은 분들의 관심 바랍니다."
+        quantity:
+          type: integer
+          example: 1
+        startPrice:
+          type: string
+          example: "10000000"
+        createDate:
+          type: string
+          format: date-time
+          example: "2024-10-27T10:34:58.964793"
+        endDate:
+          type: string
+          format: date-time
+          nullable: true
+          example: null
+        resisteredUserId:
+          type: integer
+          example: 3
+        winningUserId:
+          type: integer
+          example: 0
+        winningUserComment:
+          type: string
+          nullable: true
+          example: null
+        closedAuction:
+          type: string
+          enum: ["YES", "NO"]
+          example: "NO"
+        images:
+          type: array
+          items:
+            type: object
+            properties:
+              id:
+                type: integer
+                nullable: true
+                example: null
+              imageUrl:
+                type: string
+                format: uri
+                example: "https://c~~~~~~~~e-1729992899000-0.jpg"
 
     Bid:
       type: object
