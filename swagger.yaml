@@ -731,28 +731,9 @@ components:
     Auction:
       type: object
       properties:
-        title:
+        message:
           type: string
-        name:
-          type: string
-        description:
-          type: string
-        quantity:
-          type: integer
-        price:
-          type: string
-        resisteredUserId:
-          type: integer
-        winningUserId:
-          type: integer
-        winningUserComment:
-          type: string
-        closedAuction:
-          type: string
-        images:
-          type: array
-          items:
-            type: string
+          example: "경매 등록 성공!"
 
     Bid:
       type: object
