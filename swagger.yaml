@@ -94,19 +94,38 @@ paths:
             schema:
               type: object
               properties:
-                itemName:
+                title:
+                type: string
+                description: 경매 물품의 제목
+              name:
+                type: string
+                description: 경매 물품의 이름
+              description:
+                type: string
+                description: 경매 물품에 대한 설명
+              quantity:
+                type: integer
+                description: 경매 물품의 수량
+              price:
+                type: string
+                description: 경매 시작 가격 (단위: 만원)
+              resisteredUserId:
+                type: integer
+                description: 경매 물품을 등록한 사용자 ID
+              winningUserId:
+                type: integer
+                description: 경매에서 낙찰된 사용자 ID (낙찰되지 않은 경우 null)
+              winningUserComment:
+                type: string
+                description: 낙찰된 사용자 코멘트 (낙찰되지 않은 경우 null)
+              closedAuction:
+                type: string
+                description: 경매 종료 여부 (종료된 경우 "YES", 진행 중인 경우 "NO")
+              images:
+                type: array
+                items:
                   type: string
-                  description: 물품 이름
-                itemImage:
-                  type: string
-                  description: 물품 사진 URL
-                startPrice:
-                  type: integer
-                  description: 물품 시작 입찰가
-                endTime:
-                  type: string
-                  format: date-time
-                  description: 경매 마감 시간 (ISO 8601 형식)
+                description: 경매 물품의 이미지 파일 이름 목록
       responses:
         '200':
           description: 성공적으로 물품이 등록되었습니다.
@@ -712,17 +731,28 @@ components:
     Auction:
       type: object
       properties:
-        id:
+        title:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
+        quantity:
           type: integer
-        itemName:
+        price:
           type: string
-        itemImage:
-          type: string
-        startPrice:
+        resisteredUserId:
           type: integer
-        endTime:
+        winningUserId:
+          type: integer
+        winningUserComment:
           type: string
-          format: date-time
+        closedAuction:
+          type: string
+        images:
+          type: array
+          items:
+            type: string
 
     Bid:
       type: object
