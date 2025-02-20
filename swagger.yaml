@@ -662,9 +662,11 @@ components:
       type: object
       properties:
         accessToken:
-          type: Bearer {accessToken}
+          type: string
+          example: "Bearer {accessToken}"
         refreshToken:
-          type: Bearer {refreshToken}
+          type: string
+          example: "Bearer {refreshToken}"
     User:
       type: object
       properties:
