@@ -865,39 +865,38 @@ components:
             example: 1
           title:
             type: string
-            example: "롤렉스 서브마린 시계 경매 시작합니다!"
+            example: "노스패이스 패딩 경매 시작합니다!"
           name:
             type: string
-            example: "렉스 서브마린 시계"
-          description:
-            type: string
-            example: "아주 상태 좋은 A급 롤렉스 시계입니다. 많은 분들의 관심 바랍니다."
+            example: "노스패이스 패딩"
           quantity:
             type: integer
             example: 1
-          startPrice:
-            type: string
-            example: "10000000"
+          price:
+            type: integer
+            nullable: true
+            example: null
           createDate:
             type: string
             format: date-time
-            example: "2024-10-17T02:58:14.605097"
+            example: "2025-01-08T10:28:38.955979460"
           endDate:
             type: string
             format: date-time
             nullable: true
             example: null
-          resisteredUserId:
-            type: integer
-            example: 3
-          winningUserId:
-            type: integer
-            example: 0
-          winningUserComment:
-            type: string
-            nullable: true
-            example: null
           closedAuction:
             type: string
-            enum: ["YES", "NO"]
             example: "NO"
+          images:
+            type: array
+            items:
+              type: object
+              properties:
+                id:
+                  type: integer
+                  example: 1
+                imageUrl:
+                  type: string
+                  format: uri
+                  example: "https://jungmae.s3.ap-northeast-2.amazonaws.com/1_%EB%85%B8%EC%8A%A4%ED%8C%A8%EC%9D%B4%EC%8A%A4%20%ED%8C%A8%EB%94%A9/image-1736332122371-0.jpg"
