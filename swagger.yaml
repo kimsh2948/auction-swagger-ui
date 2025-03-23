@@ -142,36 +142,42 @@ paths:
               properties:
                 title:
                   type: string
-                  description: 경매 물품의 제목
+                  example: "롤렉스 서브마린 시계 경매 시작합니다!"
                 name:
                   type: string
-                  description: 경매 물품의 이름
+                  example: "롤렉스 서브마린 시계"
                 description:
                   type: string
-                  description: 경매 물품에 대한 설명
+                  example: "아주 상태 좋은 A급 롤렉스 시계입니다. 많은 분들의 관심 바랍니다."
                 quantity:
                   type: integer
-                  description: 경매 물품의 수량
-                price:
+                  example: 1
+                startPrice:
                   type: string
-                  description: 경매 시작 가격
-                resisteredUserId:
-                  type: integer
-                  description: 경매 물품을 등록한 사용자 ID
-                winningUserId:
-                  type: integer
-                  description: 경매에서 낙찰된 사용자 ID (낙찰되지 않은 경우 null)
-                winningUserComment:
+                  example: "10000000"
+                createDate:
                   type: string
-                  description: 낙찰된 사용자 코멘트 (낙찰되지 않은 경우 null)
-                closedAuction:
+                  format: date-time
+                  nullable: false
+                  example: "2024-09-27T10:34:58.964793"
+                endDate:
                   type: string
-                  description: 경매 종료 여부 (종료된 경우 "YES", 진행 중인 경우 "NO")
+                  format: date-time
+                  nullable: false
+                  example: "2024-10-27T10:34:58.964793"
                 images:
                   type: array
                   items:
-                    type: string
-                  description: 경매 물품의 이미지 파일 이름 목록
+                    type: object
+                    properties:
+                      id:
+                        type: integer
+                        nullable: true
+                        example: null
+                      imageUrl:
+                        type: string
+                        format: uri
+                        example: "https://c~~~~~~~~e-1729992899000-0.jpg"
       responses:
         '200':
           description: 성공적으로 물품이 등록되었습니다.
@@ -806,12 +812,13 @@ components:
         createDate:
           type: string
           format: date-time
+          nullable: false
           example: "2024-10-27T10:34:58.964793"
         endDate:
           type: string
           format: date-time
-          nullable: true
-          example: null
+          nullable: false
+          example: "2024-10-27T10:34:58.964793"
         resisteredUserId:
           type: integer
           example: 3
