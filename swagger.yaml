@@ -812,6 +812,21 @@ components:
           format: date-time
           nullable: true
           example: null
+        resisteredUserId:
+          type: integer
+          example: 3
+        winningUserId:
+          type: integer
+          nullable: true
+          example: null
+        winningUserComment:
+          type: string
+          nullable: true
+          example: null
+        closedAuction:
+          type: string
+          enum: ["YES", "NO"]
+          example: "NO"
         images:
           type: array
           items:
