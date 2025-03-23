@@ -165,6 +165,9 @@ paths:
                   format: date-time
                   nullable: false
                   example: "2024-10-27T10:34:58.964793"
+                resisteredUserId:
+                  type: Integer
+                  example: 2
                 images:
                   type: array
                   items:
