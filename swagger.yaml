@@ -874,17 +874,18 @@ components:
             example: 1
           price:
             type: integer
-            nullable: true
-            example: null
+            nullable: false
+            example: 100000
           createDate:
             type: string
             format: date-time
+            nullable: false
             example: "2025-01-08T10:28:38.955979460"
           endDate:
             type: string
             format: date-time
-            nullable: true
-            example: null
+            nullable: false
+            example: "2025-02-08T10:28:38.955979460"
           closedAuction:
             type: string
             example: "NO"
@@ -893,9 +894,6 @@ components:
             items:
               type: object
               properties:
-                id:
-                  type: integer
-                  example: 1
                 imageUrl:
                   type: string
                   format: uri
