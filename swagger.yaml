@@ -9,7 +9,7 @@ servers:
     description: Development server
 
 paths:
-  /oauth2/token:
+  /login-api/oauth2/token:
     post: 
       tags:
         - Login
@@ -30,7 +30,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/Token'
                 
-  /oauth2/user:
+  /login-api/oauth2/user:
     post: 
       tags:
         - Login
@@ -79,7 +79,7 @@ paths:
                 type: string
                 example: "Internal Server Error"
                 
-  /oauth2/token/restore:
+  /login-api/oauth2/token/restore:
     post: 
       tags:
         - Login
@@ -127,7 +127,7 @@ paths:
               schema:
                 type: string
                 example: "Internal Server Error"
-  /api/auctions:
+  /auction-api/api/auctions:
     post:
       tags:
         - Auction
@@ -190,7 +190,7 @@ paths:
                 type: string
                 example: "경매 등록 성공!"
 
-  /api/auctions/{id}:
+  /auction-api/api/auctions/{id}:
     get:
       tags:
         - Auction
@@ -211,7 +211,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/Auction'
 
-  /api/auctions/bids/{id}:
+  /auction-api/api/auctions/bids/{id}:
     post:
       tags:
         - Auction
@@ -245,7 +245,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/Bid'
 
-  /api/auctions/close/{id}:
+  /auction-api/api/auctions/close/{id}:
     post:
       tags:
         - Auction
@@ -266,7 +266,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/Auction'
 
-  /api/auctions/chat/{id}:
+  /auction-api/api/auctions/chat/{id}:
     post:
       tags:
         - Auction
@@ -287,7 +287,7 @@ paths:
               schema:
                 type: string
 
-  /api/auctions/list/open:
+  /auction-api/api/auctions/list/open:
     get:
       tags:
         - Auction
@@ -301,7 +301,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/AuctionList'
 
-  /api/auctions/list/closed:
+  /auction-api/api/auctions/list/closed:
     get:
       tags:
         - Auction
